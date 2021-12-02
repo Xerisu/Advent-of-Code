@@ -6,34 +6,19 @@ commands_list = [x for x in commands]
 
 commands_split = [elem.split() for elem in commands_list]
 
-forward_commands = []
-down_commands = []
-up_commands = []
+forward = 0
+down = 0
+up = 0
 
-for i in range(len(commands_list)):
-    if commands_split[i][0] == "forward":
-        forward_commands.append(int(commands_split[i][1]))
-    if commands_split[i][0] == "down":
-        down_commands.append(int(commands_split[i][1]))
-    if commands_split[i][0] == "up":
-        up_commands.append(int(commands_split[i][1]))
+for command in commands_split:
+    if command[0] == "forward":
+        forward += int(command[1])
+    if command[0] == "down":
+        down += int(command[1])
+    if command[0] == "up":
+        up += int(command[1])
 
-sum_forward = 0
-sum_down = 0
-sum_up = 0
-
-
-for n in forward_commands:
-  sum_forward += n
-
-for n in down_commands:
-  sum_down += n
-
-for n in up_commands:
-  sum_up += n
-
-
-print((sum_down-sum_up)*sum_forward)
+print((down-up)*forward)
 
 
 input_file.close()
