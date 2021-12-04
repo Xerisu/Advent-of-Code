@@ -12,7 +12,7 @@ for report in reports:
     reports_split.append(x)
 
 for report in reports_split:
-    while len(report) < 12:
+    while len(report) < bits:
         report.insert(0, int(0))
 
 
