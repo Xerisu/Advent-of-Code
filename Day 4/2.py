@@ -60,9 +60,6 @@ for n in numbers:
 losing_board = [x for x in losing_board for x in x]
 losing_board = [x for x in losing_board if x != -1]
 
-print(boards)
-print(losing_board)
-print(last_number)
 print(sum(losing_board*last_number))
 
 input_file.close()
