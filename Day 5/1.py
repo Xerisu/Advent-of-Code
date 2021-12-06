@@ -1,7 +1,7 @@
 input_file = open("./vents.txt","r")
 
 
-vents = [x for x in input_file.readlines()]
+vents = input_file.readlines()
 vents = [elem.strip().split('->') for elem in vents]
 
 for vent in vents:
