@@ -8,8 +8,7 @@ input_file.close()
 coded_numbers = [[[set(x) for x in x.split()] for x in line.split(" | ")] for line in temp]
 
 good_order = [None,None,None,None,None,None,None]
-# 0 = a , 1 = b, 2 = c, 3 = d, 4 = e, 5 = f, 6 = g
-#w liście jest 10 linijek, w którym każda linijka ma 2 listy - 1 lista to 10 zakodowanych cyfr, 2 lista to 4 cyfry kodu, każda z tych cyfr jest setami
+
 codes = []
 for line in coded_numbers:
     five = []

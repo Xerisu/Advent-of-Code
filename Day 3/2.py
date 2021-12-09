@@ -13,7 +13,6 @@ for report in reports_split:
     while len(report) < 12:
         report.insert(0, int(0))
 
-#czemu nie działasz kurwo
 
 sum1 = 0
 sum0 = 0
