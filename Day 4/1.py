@@ -63,3 +63,4 @@ winning_board = [x for x in winning_board if x != -1]
 print(sum(winning_board*last_number))
 
 input_file.close()
+print(boards)
