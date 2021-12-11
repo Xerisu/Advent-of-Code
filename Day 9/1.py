@@ -2,6 +2,8 @@ input_file = open("./cave.txt","r")
 
 floor = input_file.readlines()
 
+input_file.close()
+
 floor = ["9" + elem.strip() + "9" for elem in floor]
 floor = ["9" * len(floor[0])] + floor + ["9" * len(floor[0])]
 
