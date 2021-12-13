@@ -1,10 +1,10 @@
 input_file = open("./commands.txt","r")
 
 commands = input_file.readlines()
-
 commands_list = [x for x in commands]
-
 commands_split = [elem.split() for elem in commands_list]
+
+input_file.close()
 
 forward = 0
 down = 0
@@ -21,4 +21,3 @@ for command in commands_split:
 print((down-up)*forward)
 
 
-input_file.close()

@@ -2,6 +2,8 @@ input_file = open("./diagnostic-report.txt","r")
 
 reports = input_file.readlines()
 
+input_file.close()
+
 bits = 12
 
 reports_split = []
@@ -14,7 +16,6 @@ for report in reports:
 for report in reports_split:
     while len(report) < bits:
         report.insert(0, int(0))
-
 
 sum1 = 0
 sum0 = 0
@@ -39,7 +40,3 @@ for i in range(bits):
 gamma = int("".join([str(x) for x in gamma_list]), 2)
 epsilon = int("".join([str(x) for x in epsilon_list]), 2)
 print(gamma*epsilon)
-
-
-
-input_file.close()

@@ -26,6 +26,7 @@ for line in coded_numbers:
             six.append(letter)
         else:
             seven_segments = letter
+
     five_segments = five[0].intersection(five[1], five[2])
     six_segments = six[0].intersection(six[1], six[2])
     good_order[0] = three_segments.difference(two_segments)
@@ -36,6 +37,7 @@ for line in coded_numbers:
     good_order[1] = six_segments.difference(good_order[0].union(good_order[5], good_order[6]))
     good_order[4] = seven_segments.difference(good_order[0].union(good_order[0],good_order[2],good_order[3],good_order[1],good_order[5],good_order[6])) 
     code = ''
+
     for letter in line[1]:
         if len(letter) == 2:
             code += '1'

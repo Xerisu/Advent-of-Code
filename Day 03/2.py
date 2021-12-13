@@ -2,6 +2,8 @@ input_file = open("./diagnostic-report.txt","r")
 
 reports = input_file.readlines()
 
+input_file.close()
+
 reports_split = []
 
 for report in reports:
@@ -66,5 +68,3 @@ print(oxygen_rating[0], oxygen)
 print (co2_rating[0], co2)
 
 print (co2*oxygen)
-
-input_file.close()

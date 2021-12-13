@@ -1,19 +1,20 @@
 input_file = open("./crabs.txt","r")
 
-
 crabs = input_file.readlines()
 crabs = crabs[0].split(",")
+
+input_file.close()
 
 for i in range(len(crabs)):
     crabs[i] = int(crabs[i])
 
 fuel = []
-possible_optimal_line = sum(crabs) // len(crabs)
-for i in range(-1, 2, 1):
+
+for i in range(max(crabs)):
     fuel_use = 0
     for crab in crabs:
-        fuel_use += ((1 + abs(crab - possible_optimal_line+i)) * (abs(crab - possible_optimal_line+i))) // 2
+        fuel_use += abs(crab - i)
     fuel.append(fuel_use)
 
 print(min(fuel))
-input_file.close()
+

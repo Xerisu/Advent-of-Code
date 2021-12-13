@@ -1,5 +1,10 @@
 input_file = open("./bingo.txt","r")
 
+bingo_temp = input_file.readlines()
+nothing_important = [x for x in bingo_temp]
+bingo = [elem.split() for elem in nothing_important]
+
+input_file.close()
 
 def replace_with_minus_one(lista, n):
     for board in lista:
@@ -21,13 +26,6 @@ def is_bingo_on_board(board):
     else:
         return False
 
-
-bingo_temp = input_file.readlines()
-
-nothing_important = [x for x in bingo_temp]
-
-bingo = [elem.split() for elem in nothing_important]
-
 numbers = [int(x) for x in bingo[0][0].split(",")]
 
 bingo = [x for x in bingo[1:] if len(x) != 0]
@@ -43,24 +41,22 @@ for i in range(0, len(bingo), 5):
     temp_list.append([int(x) for x in bingo[i+4]])
     boards.append(temp_list)
 
-winning_board = []
+losing_board = []
 last_number = 0
 
 for n in numbers:
     replace_with_minus_one(boards, n)
-    bingo_found = False
     for board in boards:
-        if is_bingo_on_board(board) == True: 
-            bingo_found = True
-            winning_board = board
-            last_number = n
-    if bingo_found == True:
+        if is_bingo_on_board(board) == True:
+            boards.remove(board)
+    if len(boards) == 1:
+        losing_board = boards[0]
+    if len(boards) == 0:
+        last_number = n        
         break 
 
-winning_board = [x for x in winning_board for x in x]
-winning_board = [x for x in winning_board if x != -1]
+losing_board = [x for x in losing_board for x in x]
+losing_board = [x for x in losing_board if x != -1]
 
-print(sum(winning_board*last_number))
+print(sum(losing_board*last_number))
 
-input_file.close()
-print(boards)

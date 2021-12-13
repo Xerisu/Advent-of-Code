@@ -1,8 +1,9 @@
 input_file = open("./vents.txt","r")
 
-
 vents = input_file.readlines()
 vents = [elem.strip().split('->') for elem in vents]
+
+input_file.close()
 
 for vent in vents:
     i = 0
@@ -13,11 +14,7 @@ for vent in vents:
         vent[i] = newpart
         i+=1
 
-
-
-
 coords = [x for x in vents for x in x for x in x]
-
 
 size = max(coords) + 1
 
@@ -39,7 +36,6 @@ for vent in vents:
         for x in range(x_min, x_max+1):
             board[y][x] += 1
 
-
 sum = 0
 for column in board:
   for n in column:
@@ -47,8 +43,6 @@ for column in board:
       sum += 1
 print(sum)
 
-
 #for row in board:
     #print(row)
 
-input_file.close()

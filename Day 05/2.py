@@ -1,8 +1,9 @@
 input_file = open("./vents.txt","r")
 
-
 vents = [x for x in input_file.readlines()]
 vents = [elem.strip().split('->') for elem in vents]
+
+input_file.close()
 
 for vent in vents:
     i = 0
@@ -13,11 +14,7 @@ for vent in vents:
         vent[i] = newpart
         i+=1
 
-
-
-
 coords = [x for x in vents for x in x for x in x]
-
 
 size = max(coords) + 1
 
@@ -66,4 +63,3 @@ print(sum)
 '''for row in board:
     print(row)'''
 
-input_file.close()

@@ -1,14 +1,14 @@
 input_file = open("./lantern-fish.txt","r")
 
-
 fish = input_file.readlines()
 fish = fish[0].split(",")
+
+input_file.close()
 
 for i in range(len(fish)):
     fish[i] = int(fish[i])
 
-
-
+#it's pretty unoptimized btw
 for i in range(80):
     for j in range(len(fish)):
         if fish[j] == 0:
@@ -21,4 +21,3 @@ for i in range(80):
 print(len(fish))
 
 
-input_file.close()

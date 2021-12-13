@@ -12,7 +12,7 @@ octopuses = [[int(x) for x in row] for row in octopuses]
 def IsValid(y, x, list): 
     return list[y][x] not in [9]
 
-def Glowing(y, x, list, queue): #funkcja dodaje +1 jak squid zaświeci i dodaje do kolejki kolejne ośmiorniczki
+def Glowing(y, x, list, queue): #function adds +1 when octopus glows and adds another octopuses to the q(ueue)
     for i in range(-1,2):
         for j in range(-1,2):
             list[y+i][x+j] += 1

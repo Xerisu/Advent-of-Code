@@ -1,10 +1,9 @@
 input_file = open("./commands.txt","r")
 
 commands = input_file.readlines()
+commands_split = [elem.split() for elem in commands]
 
-commands_list = [x for x in commands]
-
-commands_split = [elem.split() for elem in commands_list]
+input_file.close()
 
 aim = 0
 forward = 0
@@ -20,5 +19,3 @@ for command in commands_split:
         aim -= int(command[1])
 
 print(forward*depth)
-
-input_file.close()

@@ -1,6 +1,7 @@
 from statistics import median
 input_file = open("./crabs.txt","r")
 
+input_file.close()
 
 crabs = input_file.readlines()
 crabs = crabs[0].split(",")
@@ -16,4 +17,3 @@ for crab in crabs:
 
 print(fuel_use)
 
-input_file.close()
