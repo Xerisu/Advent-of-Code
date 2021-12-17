@@ -1,4 +1,4 @@
-input_file = open("./Day 12/path.txt","r")
+input_file = open("./path.txt","r")
 
 paths = input_file.readlines()
 paths = [elem.strip() for elem in paths]
