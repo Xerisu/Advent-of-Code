@@ -2,11 +2,11 @@
 [Info about event!](https://adventofcode.com/2021/about)
 
 # My progress:
-![](https://img.shields.io/badge/day%20📅-17-blue)
+![](https://img.shields.io/badge/day%20📅-18-blue)
 
-![](https://img.shields.io/badge/stars%20⭐-28-yellow)
+![](https://img.shields.io/badge/stars%20⭐-30-yellow)
 
-![](https://img.shields.io/badge/days%20completed-14-red)
+![](https://img.shields.io/badge/days%20completed-15-red)
 
 # Padoru Gwen? Padoru Gwen!
 
