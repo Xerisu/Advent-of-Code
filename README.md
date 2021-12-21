@@ -2,11 +2,14 @@
 [Info about event!](https://adventofcode.com/2021/about)
 
 # My progress:
-![](https://img.shields.io/badge/day%20📅-18-blue)
+![](https://img.shields.io/badge/day%20📅-21-blue)
 
-![](https://img.shields.io/badge/stars%20⭐-30-yellow)
+![](https://img.shields.io/badge/stars%20⭐-32-yellow)
 
-![](https://img.shields.io/badge/days%20completed-15-red)
+![](https://img.shields.io/badge/days%20completed-16-red)
+
+
+I dropped days 16, 18 and 19 but I swear I'll come back to them stronger
 
 # Padoru Gwen? Padoru Gwen!
 
