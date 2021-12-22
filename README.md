@@ -2,7 +2,7 @@
 [Info about event!](https://adventofcode.com/2021/about)
 
 # My progress:
-![](https://img.shields.io/badge/day%20📅-21-blue)
+![](https://img.shields.io/badge/day%20📅-22-blue)
 
 ![](https://img.shields.io/badge/stars%20⭐-32-yellow)
 
@@ -10,6 +10,8 @@
 
 
 I dropped days 16, 18 and 19 but I swear I'll come back to them stronger
+
+Aaand I totally gave up. Propably. I don't know, I hope I'll have strength to finish it before 2022
 
 # Padoru Gwen? Padoru Gwen!
 
